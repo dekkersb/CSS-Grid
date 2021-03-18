@@ -1,1 +1,53 @@
 /*Maak hier jouw CSS!*/
+:root {
+    --background:#BA3A44;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #FEEEDB;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 174px auto 100px 50px;
+    grid-template-areas:
+                "a c c"
+                "b c c"
+                "b e d"
+                "b e -"
+                "f f f";
+    gap: 16px;
+
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px solid #942F38;
+    color: white;
+    padding: 6px;
+}
+
+#a {
+    grid-area: a;
+}
+
+#b {
+    grid-area: b;
+}
+
+#c {
+    grid-area: c;
+}
+
+#d {
+    grid-area: d;
+}
+
+#e {
+    grid-area: e;
+}
+
+#f {
+    grid-area: f;
+}
