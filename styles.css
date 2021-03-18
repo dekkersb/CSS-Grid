@@ -4,18 +4,35 @@
 }
 
 .grid-container {
+/*    Dit is voor schermen kleiner dan 576px dus mobiel.*/
     display: grid;
     background-color: #FEEEDB;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 174px auto 100px 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-template-areas:
+                "a"
+                "b"
+                "c"
+                "d"
+                "e"
+                "-"
+                "f";
+    gap: 16px;
+}
+
+@media screen and (min-width: 576px) {
+    /*Dit is voor grotere schermen dan mobiel, dus tablet of desktop*/
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 174px 100px auto 50px;
+        grid-template-areas:
                 "a c c"
                 "b c c"
                 "b e d"
                 "b e -"
                 "f f f";
-    gap: 16px;
-
+        gap: 16px;
+    }
 }
 
 .grid-item {
